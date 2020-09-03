@@ -1,0 +1,49 @@
+body {
+    background-image: url(https://www.ruthrumack.com/wp-content/uploads/2016/05/off-white-textured-background-1920x10803.jpg);
+}
+
+.faces-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    gap: 10px;
+    font-size: large;
+}
+.face-container:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 0.25s ease-in-out;
+    box-shadow: 0 0 25px rgb(250, 250, 250);
+}
+.face-container {
+    margin: 0 auto;
+    width: 80%;
+    padding: 2px 0;
+}
+
+.search-bar {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 375px) {
+    .faces-grid {
+        grid-template-columns: 1fr;
+      }
+}
+
+@media screen and (min-width: 768px) {
+    .faces-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .faces-grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

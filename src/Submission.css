@@ -1,0 +1,38 @@
+.input-bar {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.submit-face-btn {
+    width: 30%;
+    margin-bottom: 25px
+}
+.info-pane {
+    cursor: context-menu;
+}
+.info-pane .info-pane-text {
+    visibility: hidden;
+}
+.info-pane:hover .info-pane-text{
+    visibility: visible;
+}
+button { 
+    display: block;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 775px) {
+    .input-bar {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+        padding: 10px 0;
+    }
+    button {
+        width: 80%;
+    }
+}
