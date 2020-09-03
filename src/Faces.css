@@ -1,11 +1,16 @@
 body {
     background-image: url(https://www.ruthrumack.com/wp-content/uploads/2016/05/off-white-textured-background-1920x10803.jpg);
 }
+a {
+    margin: 0 0 15px 0;
+    display: block;
+}
 
 .search-bar {
+    font-size: 1.2em;
     outline: none;
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
     background: transparent;
     width: 30%;
     margin-bottom: 30px;
