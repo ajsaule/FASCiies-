@@ -1,10 +1,10 @@
 import React from 'react';
-import Heading from './Heading';
+// import Heading from './Heading';
 import Faces from './Faces';
 import Submission from './Submission';
 import './App.css';
 import './Faces.css';
-import './Heading.css';
+// import './Heading.css';
 import './Submission.css';
 
 function App() {

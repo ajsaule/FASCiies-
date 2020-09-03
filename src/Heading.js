@@ -8,7 +8,7 @@ export default function Heading() {
                 <h1>FA(S)Ciie Hall of Fame</h1>
                 <p>If you made it here, you've made it in life.</p>
                 <input className="search-bar" type="text" id="search" />
-                <a href="#">*click to copy</a>
+                <p>*click to copy</p>
             </nav>
         </div>
     )

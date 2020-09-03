@@ -5,7 +5,11 @@ a {
     margin: 0 0 15px 0;
     display: block;
 }
-
+.alert {
+    position: fixed;
+    top: 15;
+    right: 15
+}
 .search-bar {
     font-size: 1.2em;
     outline: none;

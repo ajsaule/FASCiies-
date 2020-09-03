@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import Alert from 'react-bootstrap/Alert';
 
 export default class Faces extends Component {
 
     state = {
-        copySuccess: '',
+        copied: false,
         searchInput: '',
         faces: {
             "neutral_upsidedown_smalleye": '( .-. )', 
@@ -203,16 +204,6 @@ export default class Faces extends Component {
             }
             return facesHtml
         }
-        // return this.state.faces.map(face => {
-        //     return (
-        //         <button 
-        //             onClick={this.copyFaces}
-        //             className="face-container">
-        //                 {face.test_face_data}
-        //         </button>
-        //     )
-        // })
-        
     }
 
     handleSearchInput = (e) => {
@@ -224,8 +215,24 @@ export default class Faces extends Component {
         this.renderFaces()
     }
 
+    handleAlert = () => {
+        setTimeout(() => {
+            this.setState({
+                copied: false,
+                searchInput: this.state.searchInput,
+                faces: this.state.faces
+            })
+        }, 3000)
+    }
+
     copyFaces = e => {
+        this.setState({
+            copied: true,
+            searchInput: this.state.searchInput,
+            faces: this.state.faces
+        })
         navigator.clipboard.writeText(e.target.innerHTML)
+        this.handleAlert()
     }
 
     render() {
@@ -233,6 +240,10 @@ export default class Faces extends Component {
         return (
             <div >
                 <nav>
+                    {this.state.copied
+                        ? <Alert variant="dark" className="alert">Copied! </Alert>
+                        : <div></div>
+                    }
                     <h1>FA(S)Ciie Hall of Fame</h1>
                     <p>If you made it here, you've made it in life.</p>
                     {/* put search icon here next to input field*/}
@@ -240,7 +251,7 @@ export default class Faces extends Component {
                         className="search-bar"
                         type="text"
                         id="search" />
-                    <a href="#">*click to copy</a>
+                    <p>*click to copy</p>
                 </nav>
                 <div className="faces-grid">
                     {this.renderFaces()}  
