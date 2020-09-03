@@ -10,7 +10,7 @@ import './Submission.css';
 function App() {
   return (
     <div className="App">
-      <Heading />
+      {/* <Heading /> */}
       <Faces /> 
       <Submission />
     </div>

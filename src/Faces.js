@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 export default class Faces extends Component {
 
     state = {
+        copySuccess: '',
         faces: [ 
             "( .-. )",
             "( .o.)",
@@ -175,23 +176,33 @@ export default class Faces extends Component {
         // if "" empty string 
         return this.state.faces.map(face => {
             return (
-                <button onClick={this.copyFaces} className="face-container">
-                    {face}
+                <button 
+                    onClick={this.copyFaces}
+                    className="face-container">
+                        {face}
                 </button>
             )
         })
     }
 
     copyFaces = e => {
-        var faceToCopy = e.target.innerHTML
-        console.log(faceToCopy)
+        navigator.clipboard.writeText(e.target.innerHTML)
     }
 
     render() {
 
         return (
-            <div className="faces-grid">
-                {this.renderFaces()}
+            <div >
+                <nav>
+                    <h1>FA(S)Ciie Hall of Fame</h1>
+                    <p>If you made it here, you've made it in life.</p>
+                    <input className="search-bar" type="text" id="search" />
+                    <a href="#">*click to copy</a>
+                </nav>
+                <div className="faces-grid">
+                    {this.renderFaces()}  
+                </div>
+                
             </div>
         )
     }
