@@ -9,7 +9,7 @@ export default class Faces extends Component {
         faces: {
             "neutral_upsidedown_smalleye": '( .-. )', 
             "surprise_upsidedown_smalleye": '( .o.)', 
-            "angry_smallface_slanteye": '( `·´ )', 
+            "angry_smallface_angleeye": '( `·´ )', 
             "happy_bigface_smalleye": '( ° ͜ ʖ °)', 
             "happy_cheeks_smalleye": '( ͡° ͜ʖ ͡°)', 
             "neutral_dissatisfied_bigeye": '( ⚆ _ ⚆ )', 
